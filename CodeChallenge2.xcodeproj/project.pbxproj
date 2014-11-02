@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA9876A61A05B9DB00457B8D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9876A51A05B9DB00457B8D /* WebViewController.m */; };
 		FAB9CAF51A02E520003FAB0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB9CAF41A02E520003FAB0B /* main.m */; };
 		FAB9CAF81A02E520003FAB0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB9CAF71A02E520003FAB0B /* AppDelegate.m */; };
 		FAB9CAFB1A02E520003FAB0B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB9CAFA1A02E520003FAB0B /* RootViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA9876A41A05B9DB00457B8D /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		FA9876A51A05B9DB00457B8D /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		FAB9CAEF1A02E520003FAB0B /* CodeChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB9CAF31A02E520003FAB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB9CAF41A02E520003FAB0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				FAB9CAFA1A02E520003FAB0B /* RootViewController.m */,
 				FAB9CB1C1A02F2C8003FAB0B /* CityDetailViewController.h */,
 				FAB9CB1D1A02F2C8003FAB0B /* CityDetailViewController.m */,
+				FA9876A41A05B9DB00457B8D /* WebViewController.h */,
+				FA9876A51A05B9DB00457B8D /* WebViewController.m */,
 				FAB9CB1B1A02E601003FAB0B /* Model */,
 				FAB9CAFC1A02E520003FAB0B /* Main.storyboard */,
 				FAB9CAFF1A02E520003FAB0B /* Images.xcassets */,
@@ -238,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB9CAFB1A02E520003FAB0B /* RootViewController.m in Sources */,
+				FA9876A61A05B9DB00457B8D /* WebViewController.m in Sources */,
 				FAB9CAF81A02E520003FAB0B /* AppDelegate.m in Sources */,
 				FAB9CAF51A02E520003FAB0B /* main.m in Sources */,
 				FAB9CB1E1A02F2C8003FAB0B /* CityDetailViewController.m in Sources */,
@@ -434,6 +440,7 @@
 				FAB9CB141A02E520003FAB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAB9CB151A02E520003FAB0B /* Build configuration list for PBXNativeTarget "CodeChallenge2Tests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +449,7 @@
 				FAB9CB171A02E520003FAB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

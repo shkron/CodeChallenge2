@@ -81,12 +81,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lfd-mY-9a8">
+                                <rect key="frame" x="16" y="120" width="288" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="0l3-JA-vSE"/>
+                                    <constraint firstAttribute="height" constant="300" id="nRb-MG-KMe"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-cG-i76">
                                 <rect key="frame" x="16" y="64" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change the city name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cng-5q-YvD">
+                                <rect key="frame" x="16" y="144" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="changeCityName:" destination="l4I-59-KaD" eventType="editingDidEnd" id="EyC-4r-6PL"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change the city state here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFq-s9-X1a">
+                                <rect key="frame" x="16" y="194" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="changeStateName:" destination="l4I-59-KaD" eventType="editingDidEnd" id="qbC-W9-WpL"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-W2-Qob">
                                 <rect key="frame" x="16" y="93" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
@@ -95,29 +118,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3SF-PK-0Jx" appends="YES" id="FqT-QI-RPG"/>
                                 </connections>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lfd-mY-9a8">
-                                <rect key="frame" x="16" y="144" width="288" height="300"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="change the city name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cng-5q-YvD">
-                                <rect key="frame" x="16" y="144" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="changeCityName:" destination="l4I-59-KaD" eventType="editingDidEnd" id="EyC-4r-6PL"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="change the city state here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFq-s9-X1a">
-                                <rect key="frame" x="16" y="194" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="changeStateName:" destination="l4I-59-KaD" eventType="editingDidEnd" id="qbC-W9-WpL"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -125,22 +130,20 @@
                             <constraint firstAttribute="centerX" secondItem="uFq-s9-X1a" secondAttribute="centerX" id="4zu-oW-4c4"/>
                             <constraint firstItem="6ov-cG-i76" firstAttribute="leading" secondItem="BFy-1N-Lvl" secondAttribute="leadingMargin" id="6MK-pe-EbV"/>
                             <constraint firstItem="cng-5q-YvD" firstAttribute="trailing" secondItem="BFy-1N-Lvl" secondAttribute="trailingMargin" id="Aie-Jm-jkj"/>
-                            <constraint firstItem="6ov-cG-i76" firstAttribute="top" secondItem="BFy-1N-Lvl" secondAttribute="topMargin" constant="64" id="UNB-VF-1nC"/>
+                            <constraint firstItem="Lfd-mY-9a8" firstAttribute="top" secondItem="RqP-Uh-I4R" secondAttribute="bottom" constant="56" id="PaX-Lv-onY"/>
+                            <constraint firstAttribute="centerX" secondItem="Lfd-mY-9a8" secondAttribute="centerX" id="ScG-sG-Bos"/>
                             <constraint firstItem="6ov-cG-i76" firstAttribute="trailing" secondItem="BFy-1N-Lvl" secondAttribute="trailingMargin" id="UbW-DW-Fu4"/>
-                            <constraint firstItem="Lfd-mY-9a8" firstAttribute="top" secondItem="BFy-1N-Lvl" secondAttribute="topMargin" constant="144" id="WkG-41-meR"/>
                             <constraint firstItem="cng-5q-YvD" firstAttribute="top" secondItem="BQ5-W2-Qob" secondAttribute="bottom" constant="21" id="aQc-an-u8J"/>
                             <constraint firstAttribute="centerX" secondItem="cng-5q-YvD" secondAttribute="centerX" id="bmG-0Z-xzJ"/>
                             <constraint firstItem="uFq-s9-X1a" firstAttribute="trailing" secondItem="BFy-1N-Lvl" secondAttribute="trailingMargin" id="dUd-Ru-lth"/>
                             <constraint firstItem="uFq-s9-X1a" firstAttribute="leading" secondItem="BFy-1N-Lvl" secondAttribute="leadingMargin" id="eHb-aN-ZfG"/>
                             <constraint firstAttribute="centerX" secondItem="BQ5-W2-Qob" secondAttribute="centerX" id="eHd-tT-KRq"/>
-                            <constraint firstItem="Lfd-mY-9a8" firstAttribute="leading" secondItem="BFy-1N-Lvl" secondAttribute="leadingMargin" id="fyC-yS-FIa"/>
+                            <constraint firstItem="6ov-cG-i76" firstAttribute="top" secondItem="RqP-Uh-I4R" secondAttribute="bottom" id="fsa-bG-nJ0"/>
                             <constraint firstItem="uFq-s9-X1a" firstAttribute="top" secondItem="cng-5q-YvD" secondAttribute="bottom" constant="20" id="hVO-qD-2iZ"/>
                             <constraint firstAttribute="centerX" secondItem="6ov-cG-i76" secondAttribute="centerX" id="nFj-JS-gng"/>
                             <constraint firstItem="BQ5-W2-Qob" firstAttribute="trailing" secondItem="BFy-1N-Lvl" secondAttribute="trailingMargin" id="nHc-Zt-wYF"/>
-                            <constraint firstItem="Lfd-mY-9a8" firstAttribute="trailing" secondItem="BFy-1N-Lvl" secondAttribute="trailingMargin" id="rg7-ZK-1N3"/>
-                            <constraint firstItem="BQ5-W2-Qob" firstAttribute="top" secondItem="6ov-cG-i76" secondAttribute="bottom" constant="8.5" id="t0i-nF-hEt"/>
+                            <constraint firstItem="BQ5-W2-Qob" firstAttribute="top" secondItem="6ov-cG-i76" secondAttribute="bottom" constant="-1" id="t0i-nF-hEt"/>
                             <constraint firstItem="BQ5-W2-Qob" firstAttribute="leading" secondItem="BFy-1N-Lvl" secondAttribute="leadingMargin" id="ya2-CY-sKS"/>
-                            <constraint firstAttribute="centerX" secondItem="Lfd-mY-9a8" secondAttribute="centerX" id="zDw-Pe-Nxa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1kd-yW-d0a"/>
@@ -150,12 +153,67 @@
                         <outlet property="stateLabel" destination="6ov-cG-i76" id="3py-SK-nD4"/>
                         <outlet property="stateNameTextField" destination="uFq-s9-X1a" id="7f9-km-QaK"/>
                         <outlet property="urlLabel" destination="BQ5-W2-Qob" id="zj5-lC-YU2"/>
+                        <segue destination="jho-YJ-i3Q" kind="modal" identifier="webSegue" id="hF7-11-nF6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6r-rm-8WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="3SF-PK-0Jx" userLabel="URL Tap Gesture Recognizer"/>
+                <tapGestureRecognizer id="3SF-PK-0Jx" userLabel="URL Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="tapHandler:" destination="l4I-59-KaD" id="YRx-NA-aA3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1083" y="345"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ZSg-gj-iq2">
+            <objects>
+                <viewController id="jho-YJ-i3Q" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qk7-Hf-zdl"/>
+                        <viewControllerLayoutGuide type="bottom" id="pGx-eL-dNE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cmr-PF-orO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1G0-iy-Ad5">
+                                <rect key="frame" x="0.0" y="20" width="320" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAZ-xd-pZO">
+                                <rect key="frame" x="16" y="540" width="288" height="28"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="4Uy-zx-vQc"/>
+                                    <constraint firstAttribute="width" constant="288" id="AoV-db-8nX"/>
+                                </constraints>
+                                <state key="normal" title="&gt;&gt; Go back to the city detail view &lt;&lt;">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackInView:" destination="jho-YJ-i3Q" eventType="touchUpInside" id="S9b-h4-Ugx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1G0-iy-Ad5" firstAttribute="leading" secondItem="cmr-PF-orO" secondAttribute="leadingMargin" constant="-16" id="28B-xF-a4b"/>
+                            <constraint firstItem="pGx-eL-dNE" firstAttribute="top" secondItem="1G0-iy-Ad5" secondAttribute="bottom" constant="28" id="BLY-aw-q1k"/>
+                            <constraint firstItem="1G0-iy-Ad5" firstAttribute="top" secondItem="cmr-PF-orO" secondAttribute="topMargin" constant="20" id="FE0-xo-lA2"/>
+                            <constraint firstAttribute="centerX" secondItem="VAZ-xd-pZO" secondAttribute="centerX" id="Zee-Ri-fhb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="VAZ-xd-pZO" secondAttribute="bottom" id="soF-3t-xjf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1G0-iy-Ad5" secondAttribute="trailing" constant="-16" id="zxA-gV-y0J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="1G0-iy-Ad5" id="6pQ-IN-uDM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yau-gA-Zzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1598" y="345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nta-03-85a">

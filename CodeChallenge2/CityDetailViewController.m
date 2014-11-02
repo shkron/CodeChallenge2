@@ -7,6 +7,7 @@
 //
 
 #import "CityDetailViewController.h"
+#import "WebViewController.h"
 
 @interface CityDetailViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *cityNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *stateNameTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *cityImageView;
+
 
 @end
 
@@ -23,9 +25,11 @@
     [super viewDidLoad];
     self.stateLabel.text = self.theCity.cityState;
     self.urlLabel.text = self.theCity.cityURL;
-    self.cityImageView.image = self.theCity.cityImage;
+    self.cityImageView.image = (UIImage *)self.theCity.cityImage;
     self.cityNameTextField.delegate = self;
     self.stateNameTextField.delegate = self;
+
+
 
 
 }
@@ -60,6 +64,24 @@
     self.stateLabel.text = self.stateNameTextField.text;
 
 }
+- (IBAction)tapHandler:(UITapGestureRecognizer *)tap
+{
+    [self performSegueWithIdentifier:@"webSegue" sender:self];
+}
 
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITapGestureRecognizer *)tap
+{
+    WebViewController *webVC = segue.destinationViewController;
+
+    NSURL *url = [NSURL URLWithString:self.theCity.cityURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    webVC.urlRequest = request;
+//    [webVC.webView loadRequest:request];
+
+
+
+}
 
 @end

@@ -26,23 +26,23 @@
     CityDetail *sanFrancisco = [[CityDetail alloc] initWithCityName:@"San Francisco"
                                                       withCityState:@"California"
                                                         withCityURL:@"http://en.wikipedia.org/wiki/San_Francisco"];
-    sanFrancisco.cityImage = [UIImage imageNamed:@"sanfrancisco"];
+    sanFrancisco.cityImage = (NSData *)[UIImage imageNamed:@"sanfrancisco"];
     CityDetail *chicago = [[CityDetail alloc] initWithCityName:@"Chicago"
                                                  withCityState:@"Illionis"
                                                    withCityURL:@"http://en.wikipedia.org/wiki/Chicago"];
-    chicago.cityImage = [UIImage imageNamed:@"chicago"];
+    chicago.cityImage = (NSData *)[UIImage imageNamed:@"chicago"];
     CityDetail *minsk = [[CityDetail alloc] initWithCityName:@"Minsk"
                                                       withCityState:@"Belarus"
                                                         withCityURL:@"http://en.wikipedia.org/wiki/Minsk"];
-    minsk.cityImage = [UIImage imageNamed:@"minsk"];
+    minsk.cityImage = (NSData *)[UIImage imageNamed:@"minsk"];
     CityDetail *portland = [[CityDetail alloc] initWithCityName:@"Portland"
                                                  withCityState:@"Oregon"
                                                    withCityURL:@"http://en.wikipedia.org/wiki/Portland,_Oregon"];
-    portland.cityImage = [UIImage imageNamed:@"portland"];
+    portland.cityImage = (NSData *)[UIImage imageNamed:@"portland"];
 
 
     self.cityArray = [@[sanFrancisco, chicago, minsk, portland] mutableCopy];
-  
+
 
 }
 
