@@ -37,31 +37,30 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
 
-    if (![self.cityNameTextField.text  isEqual: @""])
-    {
-        [self changeCityName:nil];
-    }
-    if (![self.stateNameTextField.text  isEqual: @""])
-    {
-        [self changeStateName:nil];
 
-    }
+    [self changeStateName:nil];
 
     return YES;
 }
 
 - (IBAction)changeCityName:(UITextField *)sender
 {
+    if (![self.cityNameTextField.text  isEqual: @""])
+    {
     self.theCity.cityName = self.cityNameTextField.text;
     self.navigationItem.title = self.cityNameTextField.text;
     [self.cityNameTextField resignFirstResponder];
+    }
 }
 
 - (IBAction)changeStateName:(UITextField *)sender
 {
+     if (![self.stateNameTextField.text  isEqual: @""])
+     {
     self.theCity.cityState = self.stateNameTextField.text;
-    [self.stateNameTextField resignFirstResponder];
     self.stateLabel.text = self.stateNameTextField.text;
+    [self.stateNameTextField resignFirstResponder];
+     }
 
 }
 - (IBAction)tapHandler:(UITapGestureRecognizer *)tap
